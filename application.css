@@ -1,0 +1,63 @@
+body, div, ul, ol, li, span, p, header, footer, main,
+label, input {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+main {
+  position: fixed;
+  top: 85px;
+  height: 85%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+#logo {
+  font-family: 'Montserrat', sans-serif;
+  color: grey;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  min-height: 80px;
+
+  transition: opacity 1.5s ease-in;
+  background-color: #e1e4e8;
+  /*
+  background: #2b5876;
+  background: -webkit-linear-gradient(to right, #4e4376, #2b5876);
+  background: linear-gradient(to right, #4e4376, #2b5876);
+  */
+  transition-duration: 2s;
+  border: 1px solid transparent;
+  box-shadow: 0 2px 4px -1px rgba(0,0,0,0.06), 0 4px 5px 0 rgba(0,0,0,0.06), 0 1px 10px 0 rgba(0,0,0,0.08);
+}
+
+.header-item a {
+  text-decoration: none;
+  color: #545556;
+  font-family: 'Montserrat', sans-serif;
+}
+
+ul.header-group {
+  display: flex;
+}
+
+.fa {
+  padding: 0 3px 0 3px;
+}
