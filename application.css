@@ -58,7 +58,9 @@ form#login-form {
 
 .form-button {
   cursor: pointer;
-  background: #383fc4;
+  background: #1488CC;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #383fc4, #0f70a8);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #383fc4, #0f70a8);
   border: 0;
   padding: 8px;
   color: white;
@@ -92,9 +94,8 @@ div.nav-container {
 
   transition: opacity 1.5s ease-in;
   background: #1488CC;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #383fc4, #1488CC);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #383fc4, #1488CC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  background: -webkit-linear-gradient(to right, #383fc4, #1488CC);
+  background: linear-gradient(to right, #383fc4, #1488CC);
   transition-duration: 2s;
   border: 1px solid transparent;
   box-shadow: 0 2px 4px -1px rgba(0,0,0,0.06), 0 4px 5px 0 rgba(0,0,0,0.06), 0 1px 10px 0 rgba(0,0,0,0.08);
@@ -166,11 +167,13 @@ li.header-item:hover {
 }
 
 .login-header {
-  background: #383fc4;
+  background: #1488CC;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #383fc4, #0f70a8);
+  background: linear-gradient(to right, #383fc4, #0f70a8);
   position: relative;
-  top: -20px;
-  left: -21px;
-  width: 281px;
+  top: -21px;
+  left: -22px;
+  width: 282px;
   height: 40px;
   display: flex;
   align-items: center;
@@ -180,6 +183,7 @@ li.header-item:hover {
   text-transform: uppercase;
   letter-spacing: 2px;
   border: 1px solid transparent;
+  border-radius: 2px;
   box-shadow: 0 2px 4px -1px rgba(0,0,0,0.06), 0 4px 5px 0 rgba(0,0,0,0.06), 0 1px 10px 0 rgba(0,0,0,0.08);
 }
 
