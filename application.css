@@ -1,8 +1,12 @@
 body, div, ul, ol, li, span, p, header, footer, main,
-label, input {
+label, input, html {
   padding: 0;
   margin: 0;
   list-style: none;
+}
+
+body {
+  background: url('scratchwork.png');
 }
 
 main {
@@ -15,6 +19,22 @@ main {
   align-items: center;
 }
 
+.skip-link {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  background: #8B0000;
+  padding: 5px;
+  z-index: 4;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
 .hidden {
     position: absolute;
     left: 0;
@@ -24,25 +44,57 @@ main {
     overflow: hidden;
 }
 
-#logo {
-  font-family: 'Montserrat', sans-serif;
-  color: grey;
+.logo-container a {
+  text-decoration: none;
 }
 
-nav {
+form#login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 135px;
+}
+
+.form-button {
+  cursor: pointer;
+  background: #383fc4;
+  border: 0;
+  padding: 8px;
+  color: white;
+  margin: 5px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  letter-spacing: .5px;
+}
+
+div.entry-container {
+  height: 35px;
+}
+.entry-container input {
+    height: 25px;
+    font-size: 16px;
+}
+
+#logo {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  font-size: 30px;
+  padding: 0 20px 0 20px;
+}
+
+div.nav-container {
   display: flex;
   align-items: center;
   position: fixed;
   width: 100%;
-  min-height: 80px;
+  height: 80px;
 
   transition: opacity 1.5s ease-in;
-  background-color: #e1e4e8;
-  /*
-  background: #2b5876;
-  background: -webkit-linear-gradient(to right, #4e4376, #2b5876);
-  background: linear-gradient(to right, #4e4376, #2b5876);
-  */
+  background: #1488CC;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #383fc4, #1488CC);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #383fc4, #1488CC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   transition-duration: 2s;
   border: 1px solid transparent;
   box-shadow: 0 2px 4px -1px rgba(0,0,0,0.06), 0 4px 5px 0 rgba(0,0,0,0.06), 0 1px 10px 0 rgba(0,0,0,0.08);
@@ -50,14 +102,103 @@ nav {
 
 .header-item a {
   text-decoration: none;
-  color: #545556;
+  color: white;
   font-family: 'Montserrat', sans-serif;
+  letter-spacing: .5px;
 }
 
 ul.header-group {
   display: flex;
+  align-items: center;
+}
+
+li.header-item {
+  padding: 0 10px 0 10px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+li.header-item:hover {
+  background-color: #eff0f1;
+  /*background-color: #eff0f1;*/
 }
 
 .fa {
-  padding: 0 3px 0 3px;
+  padding: 0 4px 0 4px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% 18% 18% 20%; /* 15% from the top and centered */
+    max-width: 700px;
+    padding: 20px;
+    border: 1px solid #888;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 150px;
+}
+
+.login-form-container {
+  padding: 20px;
+  background: #f7f7f7;
+  height: 200px;
+  width: 240px;
+  border: 2px solid #383fc4;
+  border-radius: 3px;
+}
+
+.login-header {
+  background: #383fc4;
+  position: relative;
+  top: -20px;
+  left: -21px;
+  width: 281px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: 1px solid transparent;
+  box-shadow: 0 2px 4px -1px rgba(0,0,0,0.06), 0 4px 5px 0 rgba(0,0,0,0.06), 0 1px 10px 0 rgba(0,0,0,0.08);
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  padding-bottom: 10px;
+  width: 100%;
+  color: black;
+}
+
+p#signature {
+  padding-left: 25px;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.5px;
+  color: #383fc4;
 }

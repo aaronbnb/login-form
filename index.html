@@ -5,41 +5,74 @@
     <title>aaronbnb | Login or Register</title>
     <meta name="description" content="Login or Register with aaronbnb. Form compliant with WCAG 2.0">
     <link rel="stylesheet" href="./application.css">
-        <script src="https://use.fontawesome.com/4bf3992d10.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+    <script src="https://use.fontawesome.com/4bf3992d10.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.js"
+      integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+      crossorigin="anonymous"></script>
+    <noscript>Your browser does not support JavaScript! Please enable JavaScript in order to log in or register with site.</noscript>
   </head>
   <body>
     <header>
-      <div class="logo-container">
-
+      <a href="#login-form-description" class="skip-link">Skip to main content</a>
+      <div class="nav-container">
+        <div class="logo-container">
+          <a href="#username"><h2 id="logo">A</h2></a>
+        </div>
         <nav>
           <h2 class="hidden">aaronbnb Site Navigation</h2>
           <ul class="header-group">
-            <li class="header-item"><a href="/" target="blank"><i class="fa fa-code" aria-hidden="true"></i><span>Project Repo</span></a></li>
-            <li class="header-item"><a href="#" target="blank"><i class="fa fa-github" aria-hidden="true"></i><span>Github</span></a></li>
-            <li class="header-item"><a href="#" target="blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></i><span>LinkedIn</span></a></li>
+            <li class="header-item"><a href="https://github.com/aaronbnb/login-form" target="blank"><i class="fa fa-code" aria-hidden="true"></i><span>Project Repo</span><span class="hidden">opens in new window</span></a></li>
+            <li class="header-item"><a href="https://github.com/aaronbnb" target="blank"><i class="fa fa-github" aria-hidden="true"></i><span>GitHub</span><span class="hidden">opens in new window</span></a></li>
+            <li class="header-item"><a href="https://www.linkedin.com/in/aaronfarber/" target="blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i><span>LinkedIn</span><span class="hidden">opens in new window</span></a></li>
           </ul>
         </nav>
       </div>
     </header>
     <main>
       <div class="login-form-container">
-        <form class="" action="index.html" method="post">
-          <legend>Login or Register</legend>
-            <div class="entry-container">
-              <label for="username" class="hidden">Enter Username</label>
-              <input type="text" name="username" placeholder="Username">
-            </div>
-            <div class="entry-container">
-              <label for="password" class="hidden">Enter Password</label>
-              <input type="text" name="" placeholder="Password">
-            </div>
-            <div class="">
-              <input id="login-button"type="submit" name="login" value="subbmit">
-            </div>
+        <div class="login-header">
+          <legend id="login-form-description" tabindex="-1">Login</legend>
+        </div>
+        <form id="login-form">
+          <div class="entry-container">
+            <label for="username" class="hidden">Enter Username</label>
+            <input type="text" name="username" id="username" placeholder="Username">
+          </div>
+          <div class="entry-container">
+            <label for="password" class="hidden">Enter Password</label>
+            <input type="password" name="password" id="password" placeholder="Password">
+          </div>
+          <div class="button-container">
+            <input id="submit-credentials" type="submit" name="login" value="Login"
+            class="form-button"></input>
+          </div>
         </form>
       </div>
+
+
+
+      <!-- The Modal -->
+      <div id="modal-overlay" class="modal">
+        <div class="modal-content">
+
+          <p id="processed-response" tabindex="-1"></p>
+          <input type="submit" id="close" value="Okay" class="form-button"></input>
+        </div>
+
+      </div>
+
     </main>
-    <footer>Developed by Aaron Farber</footer>
+    <footer>
+      <div class="footer">
+        <p id="signature">developed by aaronbnb</p>
+      </div>
+
+    </footer>
+
+    <script src="modal.js" charset="utf-8"></script>
+
   </body>
 </html>
