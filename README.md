@@ -1,4 +1,4 @@
-#Login Form
+# Login Form
 
 [Login Form live][login] **Please take a moment to explore the form**
 
@@ -6,11 +6,11 @@
 
 This login form is built with the traditional front-end languages--HTML5, CSS3, and JavaScript.
 
-##Accessibility Features
+## Accessibility Features
 
 This login page has several important accessibility features to aid users relying on screen readers or possessing a motor disability and thus, no pointer interface. This page supports a logical tab order, which matches the DOM order. The site also ensures that images aren't necessary for navigation, which supports the visually impaired or those with slower Internet and unable to load images.
 
-###Skip to Content Link
+### Skip to Content Link
 ```html
   <a href="#login-form-description" class="skip-link">Skip to main content</a>
 
@@ -21,7 +21,7 @@ For users that use tab to navigate through a webpage, it can be annoying to have
 
 Also, note the tabindex="-1". For HTML elements that are not naturally added to the tab order, you apply a negative tab order and then programmatically focus the element using JavaScript.
 
-###Hidden Text to Explain Navigation
+### Hidden Text to Explain Navigation
 
 Throughout the HTML, it's best to provide guidance to screen reader users on navigation. For the average user, clicking the wrong link or opening a new tab is a short inconvenience but for a screen reader user, a simple wrong turn can takes minutes to return to previous focus.
 
@@ -32,7 +32,7 @@ Throughout the HTML, it's best to provide guidance to screen reader users on nav
 
 For screen reader users, it can be disorienting to click an external link, opening a new page. I add some hidden text after displayed link title, instructing users that a new window will be opened.
 
-###Modals and Trapping Tab Key
+### Modals and Trapping Tab Key
 
 Focus determines where keyboard events go in the page. For those relying on the keyboard, focus is the primary means of navigating a webpage. Modals can be a tricky issue as they should not be included in tab order unless they're open. And if a modal is open, we want to restrict the user from maneuvering to elsewhere on the page until the modal is closed.
 
