@@ -15,27 +15,37 @@
     <noscript>Your browser does not support JavaScript! Please enable JavaScript in order to log in or register with site.</noscript>
   </head>
   <body>
+
     <header>
+
       <a href="#login-form-description" class="skip-link">Skip to main content</a>
       <div class="nav-container">
+
         <div class="logo-container">
-          <a href="#username"><h2 id="logo">A</h2></a>
+          <a href="#" aria-label="Homepage"><h2 id="logo">A</h2></a>
         </div>
+
         <nav>
           <h2 class="hidden">aaronbnb Site Navigation</h2>
           <ul class="header-group">
-            <li class="header-item"><a href="https://github.com/aaronbnb/login-form" target="blank"><i class="fa fa-code" aria-hidden="true"></i><span>Project Repo</span><span class="hidden">opens in new window</span></a></li>
-            <li class="header-item"><a href="https://github.com/aaronbnb" target="blank"><i class="fa fa-github" aria-hidden="true"></i><span>GitHub</span><span class="hidden">opens in new window</span></a></li>
-            <li class="header-item"><a href="https://www.linkedin.com/in/aaronfarber/" target="blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i><span>LinkedIn</span><span class="hidden">opens in new window</span></a></li>
+            <li class="header-item"><a href="https://github.com/aaronbnb/login-form" target="blank"><i class="fa fa-code" aria-hidden="true"></i><span>Project Repo </span><span class="hidden">opens in new window</span></a></li>
+            <li class="header-item"><a href="https://github.com/aaronbnb" target="blank"><i class="fa fa-github" aria-hidden="true"></i><span>GitHub </span><span class="hidden">opens in new window</span></a></li>
+            <li class="header-item"><a href="https://www.linkedin.com/in/aaronfarber/" target="blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i><span>LinkedIn </span><span class="hidden">opens in new window</span></a></li>
           </ul>
         </nav>
+
       </div>
+
     </header>
+
     <main>
+
       <div class="login-form-container">
+
         <div class="login-header">
           <legend id="login-form-description" tabindex="-1">Login</legend>
         </div>
+
         <form id="login-form">
           <div class="entry-container">
             <label for="username" class="hidden">Enter Username</label>
@@ -46,18 +56,16 @@
             <input type="password" name="password" id="password" placeholder="Password">
           </div>
           <div class="button-container">
-            <input id="submit-credentials" type="submit" name="login" value="Login"
+            <input id="submit-credentials" type="submit" name="Enter" value="Login"
             class="form-button"></input>
           </div>
         </form>
+
       </div>
-
-
-
       <!-- The Modal -->
       <div id="modal-overlay" class="modal">
-        <div class="modal-content">
 
+        <div class="modal-content">
           <p id="processed-response" tabindex="-1"></p>
           <input type="submit" id="close" value="Okay" class="form-button"></input>
         </div>
@@ -65,14 +73,18 @@
       </div>
 
     </main>
+
     <footer>
+
       <div class="footer">
-        <p id="signature">developed by aaronbnb</p>
+        <ul>
+          <a href="https://www.aaronbnb.com" id="signature">developed by aaronbnb
+          <span class="hidden"> Personal site opens in a new window</span></a>
+        </ul>
       </div>
 
     </footer>
 
     <script src="login.js" charset="utf-8"></script>
-
   </body>
 </html>

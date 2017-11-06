@@ -7,7 +7,7 @@ var btn = document.getElementById("submit-credentials");
 var span = document.getElementById("close");
 
 // When the user clicks on the button, open the modal
-btn.onclick = function() {
+btn.onclick = () => {
     username = document.getElementById('username').value;
     password = document.getElementById('password').value;
     resetFields();
@@ -20,7 +20,6 @@ btn.onclick = function() {
     var lastTab = focusableElements[focusableElements.length - 1];
 
     modal.addEventListener('keydown', trapTabKey);
-    console.log("dsfssf");
     focusedElementBeforeModal = document.activeElement;
     modal.style.display = "block";
     processLoginResponse(username, password);
@@ -38,12 +37,14 @@ btn.onclick = function() {
 
     function trapTabKey(e) {
     if (e.keyCode === 9) {
-      console.log(e);
+
       if (e.shiftKey) {
         if (document.activeElement === firstTab) {
-          console.log("jello");
+
           e.preventDefault();
           lastTab.focus();
+        } else {
+          firstTab.focus();
         }
 
       } else {
@@ -76,7 +77,8 @@ function processLoginResponse(name, pw) {
 
   } else if (name.length < 6 && pw.length < 6) {
     response = `You're logged in, ${name}. Although, most sites usually` +
-    " require at least a 7 character username/password. Plus, there's no backend...";
+      " require at least a 7 character username/password. Plus, " +
+      "there's no backend...";
   } else {
     response = `You're logged in, ${name}. There's no` +
     " backend though so your credentials won't persist.";

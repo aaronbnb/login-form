@@ -68,6 +68,9 @@ form#login-form {
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   letter-spacing: .5px;
+  transition-duration: 2s;
+  border: 1px solid transparent;
+  box-shadow: 0 2px 4px -1px rgba(0,0,0,0.06), 0 4px 5px 0 rgba(0,0,0,0.06), 0 1px 10px 0 rgba(0,0,0,0.08);
 }
 
 div.entry-container {
@@ -76,6 +79,8 @@ div.entry-container {
 .entry-container input {
     height: 25px;
     font-size: 16px;
+    letter-spacing: 1px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #logo {
@@ -157,6 +162,9 @@ li.header-item:hover {
     align-items: center;
     justify-content: space-around;
     height: 150px;
+    transition-duration: 2s;
+    border: 1px solid transparent;
+    box-shadow: 0 2px 4px -1px rgba(0,0,0,0.06), 0 4px 5px 0 rgba(0,0,0,0.06), 0 1px 10px 0 rgba(0,0,0,0.08);
 }
 
 .login-form-container {
@@ -164,8 +172,11 @@ li.header-item:hover {
   background: #f7f7f7;
   height: 200px;
   width: 240px;
-  border: 2px solid #383fc4;
+  border: 2px solid lightgrey;
   border-radius: 3px;
+  transition-duration: 2s;
+  border: 1px solid transparent;
+  box-shadow: 0 2px 4px -1px rgba(0,0,0,0.06), 0 4px 5px 0 rgba(0,0,0,0.06), 0 1px 10px 0 rgba(0,0,0,0.08);
 }
 
 .login-header {
@@ -186,7 +197,7 @@ li.header-item:hover {
   letter-spacing: 2px;
   border: 1px solid transparent;
   border-radius: 2px;
-  box-shadow: 0 2px 4px -1px rgba(0,0,0,0.06), 0 4px 5px 0 rgba(0,0,0,0.06), 0 1px 10px 0 rgba(0,0,0,0.08);
+
 }
 
 .button-container {
@@ -202,9 +213,12 @@ li.header-item:hover {
   color: black;
 }
 
-p#signature {
-  padding-left: 25px;
+a#signature {
+  margin-left: 25px;
   font-family: 'Montserrat', sans-serif;
   letter-spacing: 0.5px;
   color: #383fc4;
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #383fc4;
 }

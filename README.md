@@ -54,35 +54,35 @@ firstTab.focus();
 
 //close modal if click on overlay
 window.onclick = function(e) {
-    e.preventDefault();
-    if (e.target === modal) {
-      modal.style.display = "none";
-      focusedElementBeforeModal.focus();
-    }
+  e.preventDefault();
+  if (e.target === modal) {
+    modal.style.display = "none";
+    focusedElementBeforeModal.focus();
+  }
 };
 
 function trapTabKey(e) {
-if (e.keyCode === 9) {
-  console.log(e);
-  if (e.shiftKey) {
-    if (document.activeElement === firstTab) {
-      console.log("jello");
-      e.preventDefault();
-      lastTab.focus();
-    }
+  if (e.keyCode === 9) {
+    console.log(e);
+    if (e.shiftKey) {
+      if (document.activeElement === firstTab) {
+        console.log("jello");
+        e.preventDefault();
+        lastTab.focus();
+      }
 
   } else {
-    if (document.activeElement === lastTab) {
-      e.preventDefault();
-      firstTab.focus();
+      if (document.activeElement === lastTab) {
+        e.preventDefault();
+        firstTab.focus();
+      }
     }
   }
-}
 
-if (e.keyCode === 27) {
-  modal.style.display = "none";
-  focusedElementBeforeModal.focus();
-}
+  if (e.keyCode === 27) {
+    modal.style.display = "none";
+    focusedElementBeforeModal.focus();
+  }
 }
 
 ```
