@@ -222,3 +222,7 @@ a#signature {
   padding-bottom: 2px;
   border-bottom: 1px solid #383fc4;
 }
+
+h2 {
+  font-size: 20px;
+}
