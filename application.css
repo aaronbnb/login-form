@@ -111,6 +111,7 @@ div.nav-container {
   color: white;
   font-family: 'Montserrat', sans-serif;
   letter-spacing: .5px;
+  margin: 0 2px 0 2px;
 }
 
 ul.header-group {
@@ -130,11 +131,11 @@ li.header-item {
 
 li.header-item:hover {
   border-bottom: 4px solid #eff0f1;
-  height: 80px;
+  height: 73px;
 }
 
 .fa {
-  padding: 0 4px 0 4px;
+  padding: 0 4px 0 2px;
 }
 
 .modal {
@@ -221,6 +222,11 @@ a#signature {
   text-decoration: none;
   padding-bottom: 2px;
   border-bottom: 1px solid #383fc4;
+}
+a#signature:hover {
+  transition-duration: 1s;
+  color: #4286f4;
+  border-bottom: 1px solid #4286f4;
 }
 
 h2 {
