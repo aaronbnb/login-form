@@ -238,8 +238,15 @@ a#signature {
   padding-bottom: 2px;
   border-bottom: 1px solid #383fc4;
 }
+
 a#signature:hover {
   transition-duration: .5s;
   color: #4286f4;
   border-bottom: 1px solid #4286f4;
+}
+
+#processed-response {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.5px;
 }
