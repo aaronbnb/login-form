@@ -4,13 +4,16 @@ var password;
 
 var modal = document.getElementById('modal-overlay');
 var btn = document.getElementById("submit-credentials");
-var span = document.getElementById("close");
+var closeBtn = document.getElementById("close");
+var background = document.querySelector('.wrapper');
 
 // When the user clicks on the button, open the modal
 btn.onclick = () => {
     username = document.getElementById('username').value;
     password = document.getElementById('password').value;
     resetFields();
+
+    background.setAttribute('aria-hidden', true);
 
     var focusableElementsString = 'p, a[href], input:not([disabled])';
     var focusableElements = modal.querySelectorAll(focusableElementsString);
@@ -24,7 +27,7 @@ btn.onclick = () => {
     modal.style.display = "block";
     processLoginResponse(username, password);
 
-    firstTab.focus();
+    lastTab.focus();
 
     //close modal if click on overlay
     window.onclick = function(e) {
@@ -57,6 +60,7 @@ btn.onclick = () => {
 
     if (e.keyCode === 27) {
       modal.style.display = "none";
+      background.removeAttribute('aria-hidden');
       focusedElementBeforeModal.focus();
     }
   }
@@ -64,9 +68,10 @@ btn.onclick = () => {
 };
 
 //close modal
-span.onclick = function(e) {
+closeBtn.onclick = function(e) {
   e.preventDefault();
   modal.style.display = "none";
+  background.removeAttribute('aria-hidden');
   focusedElementBeforeModal.focus();
 };
 

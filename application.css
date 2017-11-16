@@ -239,7 +239,7 @@ a#signature {
   border-bottom: 1px solid #383fc4;
 }
 a#signature:hover {
-  transition-duration: 1s;
+  transition-duration: .5s;
   color: #4286f4;
   border-bottom: 1px solid #4286f4;
 }

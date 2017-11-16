@@ -7,6 +7,7 @@
     <meta name="description" content="Login or Register with aaronbnb. Form compliant with WCAG 2.0">
     <link rel="stylesheet" href="./application.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 
     <script src="https://use.fontawesome.com/4bf3992d10.js"></script>
     <script
@@ -16,7 +17,7 @@
     <noscript>Your browser does not support JavaScript! Please enable JavaScript in order to log in or register with site.</noscript>
   </head>
   <body>
-
+  <div class="wrapper">
     <header>
 
       <a href="#login-form-description" class="skip-link">Skip to main content</a>
@@ -70,16 +71,7 @@
 
       </div>
       <!-- The Modal -->
-      <div id="modal-overlay" class="modal">
 
-        <div class="modal-content">
-          <p id="processed-response" tabindex="-1"></p>
-          <div class="button-container">
-            <input type="submit" id="close" value="Okay" class="form-button"></input>
-          </div>
-        </div>
-
-      </div>
 
     </main>
 
@@ -93,6 +85,17 @@
       </div>
 
     </footer>
+</div>
+    <div id="modal-overlay" class="modal">
+
+      <div class="modal-content">
+        <p id="processed-response" tabindex="-1"></p>
+        <div class="button-container">
+          <input type="submit" id="close" value="Okay" class="form-button"></input>
+        </div>
+      </div>
+
+    </div>
 
     <script src="login.js" charset="utf-8"></script>
   </body>
