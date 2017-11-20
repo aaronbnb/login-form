@@ -37,6 +37,8 @@ For screen reader users, it can be disorienting to click an external link, openi
 Focus determines where keyboard events go in the page. For those relying on the keyboard, focus is the primary means of navigating a webpage. Modals can be a tricky issue as they should not be included in tab order unless they're open. And if a modal is open, we want to restrict the user from maneuvering to elsewhere on the page until the modal is closed.
 
 ```javascript
+background.setAttribute('aria-hidden', true);
+
 var focusableElementsString = 'p, a[href], input:not([disabled])';
 var focusableElements = modal.querySelectorAll(focusableElementsString);
 focusableElements = Array.prototype.slice.call(focusableElements);
@@ -45,12 +47,12 @@ var firstTab = focusableElements[0];
 var lastTab = focusableElements[focusableElements.length - 1];
 
 modal.addEventListener('keydown', trapTabKey);
-console.log("dsfssf");
 focusedElementBeforeModal = document.activeElement;
 modal.style.display = "block";
+
 processLoginResponse(username, password);
 
-firstTab.focus();
+lastTab.focus();
 
 //close modal if click on overlay
 window.onclick = function(e) {
@@ -62,29 +64,33 @@ window.onclick = function(e) {
 };
 
 function trapTabKey(e) {
-  if (e.keyCode === 9) {
-    console.log(e);
-    if (e.shiftKey) {
-      if (document.activeElement === firstTab) {
-        console.log("jello");
-        e.preventDefault();
-        lastTab.focus();
-      }
+if (e.keyCode === 9) {
+
+  if (e.shiftKey) {
+    e.preventDefault();
+
+    if (document.activeElement === firstTab) {
+      lastTab.focus();
+    } else {
+      firstTab.focus();
+    }
 
   } else {
-      if (document.activeElement === lastTab) {
-        e.preventDefault();
-        firstTab.focus();
-      }
+    if (document.activeElement === lastTab) {
+      e.preventDefault();
+      firstTab.focus();
     }
-  }
-
-  if (e.keyCode === 27) {
-    modal.style.display = "none";
-    focusedElementBeforeModal.focus();
   }
 }
 
+  if (e.keyCode === 27) {
+    modal.style.display = "none";
+    background.removeAttribute('aria-hidden');
+    focusedElementBeforeModal.focus();
+  }
+}
 ```
 
 Here we select all of the focusable elements in the modal and allow the user to tab through them in a loop, trapping them in the modal and thus, preventing them from accessing content outside the modal. We also add a listener for the ESC key to allow user to simply exit the modal. This is an easy feature that should be implemented for all pop-ups.
+
+Also, note that we set the background's aria-hidden attribute, which is false by default, to true while the modal is open. This keeps screen reader users from maneuvering to text outside the modal.
