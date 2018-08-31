@@ -8,7 +8,15 @@
     <link rel="stylesheet" href="./application.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="icon" href="./favicon.ico">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125042716-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
+      gtag('config', 'UA-125042716-1');
+    </script>
     <script src="https://use.fontawesome.com/4bf3992d10.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.2.1.js"
@@ -30,8 +38,8 @@
         </div>
 
         <nav>
-          <h2 class="hidden">Site Navigation</h2>
-          <ul class="header-group">
+          <h2 class="hidden" id="site-nav">Site Navigation</h2>
+          <ul class="header-group" aria-labeledby="site-nav">
             <li class="header-item">
               <a id="hi"href="https://github.com/aaronbnb/login-form" target="blank" id="hi"><i class="fa fa-code" aria-hidden="true"></i><span>Project Repo </span><span class="hidden"> opens in new window</span></a>
             </li>
@@ -91,7 +99,7 @@
 
     <div id="modal-overlay" class="modal">
 
-      <div class="modal-content">
+      <div class="modal-content" role="dialog">
         <p id="processed-response" tabindex="-1"></p>
         <div class="button-container">
           <input type="submit" id="close" value="Okay" class="form-button"></input>
