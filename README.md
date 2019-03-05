@@ -91,6 +91,6 @@ if (e.keyCode === 9) {
 }
 ```
 
-First, we store the last focused element before the modal opens. When the modal is closed, the user's focus will return to its previous position, making navigation more sensible. As modal opens, we select all of the focusable elements in the modal and allow the user to tab through them in a loop, trapping the user in the modal and thus, preventing them from accessing form controls outside the modal. We also add a listener for the ESC key to allow user to simply exit the modal. This is an easy feature that should be implemented for all pop-ups.
+First, we store the last focused element before the modal opens. When the modal is closed, the user's focus will return to its previous position, making navigation more sensible. As modal opens, we select all of the focusable elements in the modal and allow the user to tab through them in a loop, trapping the user in the modal and thus, preventing them from accessing form controls outside the modal. We add a listener for the ESC key to allow user to simply exit the modal. This is an easy feature that should be implemented for all pop-ups.
 
 Also, note that we set the background's aria-hidden attribute, which is false by default, to true while the modal is open. This keeps screen reader users from maneuvering to text outside the modal.
