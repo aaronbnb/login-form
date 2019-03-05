@@ -4,7 +4,7 @@
 
 [login]: https://aaronbnb.github.io/login-form
 
-This login form is built with the traditional front-end languages--HTML5, CSS3, and JavaScript.
+This login form is built with the traditional front-end languages--HTML5, CSS3, and JavaScript--supported by all major browsers.
 
 ## Accessibility Features
 
